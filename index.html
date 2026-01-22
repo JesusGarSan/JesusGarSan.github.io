@@ -27,6 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#publicaciones">Publicaciones</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#proyectos">Proyectos de investigación</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divulgacion">Divulgación Científica</a></li>
                     </ul>
                 </div>
@@ -37,7 +39,7 @@
             <div class="container d-flex align-items-center flex-column flex-lg-row text-lg-start">
                 <div class="d-flex flex-column align-items-center mb-5 mb-lg-0 me-lg-5">
                     <img class="masthead-avatar mb-3" src="assets/img/foto.svg" alt="Jesús García Sánchez" />
-                    <a class="btn btn-xl btn-outline-light" href="CV.pdf" download>
+                    <a class="btn btn-xl btn-outline-light" href="assets/CV.pdf" download>
                         <i class="fas fa-download me-2"></i>
                         Descarga mi CV
                     </a>
@@ -58,6 +60,50 @@
                 </div>
             </div>
         </header>
+
+        <!-- Publications-->
+        <section class="page-section" id="publicaciones">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Publicaciones</h2>
+                <div class="divider-custom">
+                </div>
+                
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-10 text-center">
+                        <a class="btn btn-outline-secondary btn-sm mx-1 mb-2" href="TU_SCHOLAR" target="_blank"><i class="fas fa-graduation-cap me-1"></i> Google Scholar</a>
+                        <a class="btn btn-outline-secondary btn-sm mx-1 mb-2" href="TU_ORCID" target="_blank"><i class="fab fa-orcid me-1"></i> ORCID</a>
+                        <a class="btn btn-outline-secondary btn-sm mx-1 mb-2" href="TU_RG" target="_blank"><i class="fas fa-flask me-1"></i> ResearchGate</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <h3 class="text-center text-secondary text-uppercase" style="font-size: 1.2rem;">Artículos</h3>
+                        <div id="contenedor-articulos" class="scroll-container shadow-sm">
+                            </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <h3 class="text-center text-secondary text-uppercase" style="font-size: 1.2rem;">Congresos y Conferencias</h3>
+                        <div id="contenedor-congresos" class="scroll-container shadow-sm">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Proyectos de investigación -->
+        <section class="page-section portfolio" id="proyectos">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Proyectos de investigación</h2>
+                <div class="divider-custom">
+                </div>
+                <div class="row justify-content-center" id="contenedor-proyectos">
+                    </div>
+            </div>
+        </section>
         <!-- Science Communication Section-->
         <section class="page-section portfolio" id="divulgacion">
             <div class="container">
@@ -106,7 +152,176 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    fetch('divulgacion.json')
+const mesesMap = {
+        'jan': { val: 0, nombre: 'enero' }, 'feb': { val: 1, nombre: 'febrero' },
+        'mar': { val: 2, nombre: 'marzo' }, 'apr': { val: 3, nombre: 'abril' },
+        'may': { val: 4, nombre: 'mayo' }, 'jun': { val: 5, nombre: 'junio' },
+        'jul': { val: 6, nombre: 'julio' }, 'aug': { val: 7, nombre: 'agosto' },
+        'sep': { val: 8, nombre: 'septiembre' }, 'oct': { val: 9, nombre: 'octubre' },
+        'nov': { val: 10, nombre: 'noviembre' }, 'dec': { val: 11, nombre: 'diciembre' }
+    };
+
+    function parseBibtexByTag(text, tagToFilter) {
+        const entries = [];
+        // Separamos el texto buscando el patrón @tipo{
+        const regex = new RegExp(`@${tagToFilter}`, 'gi');
+        const blocks = text.split(/@/i).slice(1);
+
+        blocks.forEach(block => {
+            // Comprobamos si este bloque empieza por el tipo que queremos (article o inproceedings)
+            if (block.toLowerCase().startsWith(tagToFilter.toLowerCase())) {
+                const entry = {};
+                
+                // Título
+                const titleMatch = block.match(/title\s*=\s*\{(.+?)\}/is);
+                if (titleMatch) entry.title = titleMatch[1].replace(/\s+/g, ' ').replace(/[\{\}]/g, '');
+
+                // Autores
+                const authorMatch = block.match(/author\s*=\s*\{(.+?)\}/is);
+                if (authorMatch) entry.author = authorMatch[1].replace(/\s+/g, ' ');
+
+                // Fuente: journal para artículos, booktitle para congresos
+                const sourceMatch = block.match(/(journal|booktitle)\s*=\s*\{(.+?)\}/is);
+                if (sourceMatch) entry.source = sourceMatch[2];
+
+                // Año y Mes
+                const yearMatch = block.match(/year\s*=\s*\{?(\d{4})\}?/i);
+                if (yearMatch) entry.year = parseInt(yearMatch[1]);
+
+                const monthMatch = block.match(/month\s*=\s*\{?(\w+)\}?/i);
+                if (monthMatch) {
+                    const mesKey = monthMatch[1].toLowerCase().substring(0, 3);
+                    if (mesesMap[mesKey]) {
+                        entry.monthVal = mesesMap[mesKey].val;
+                        entry.monthName = mesesMap[mesKey].nombre;
+                    }
+                }
+                
+                const urlMatch = block.match(/url\s*=\s*\{(.+?)\}/i);
+                if (urlMatch) entry.url = urlMatch[1];
+
+                if (entry.title) entries.push(entry);
+            }
+        });
+        return entries;
+    }
+
+    function inicializarPublicaciones() {
+        fetch('assets/publicaciones.bib')
+            .then(response => response.text())
+            .then(text => {
+                // Cargamos artículos filtrando por @article
+                renderizarLista(parseBibtexByTag(text, 'article'), 'contenedor-articulos');
+                // Cargamos congresos filtrando por @inproceedings
+                renderizarLista(parseBibtexByTag(text, 'inproceedings'), 'contenedor-congresos');
+            });
+    }
+
+    function renderizarLista(pubs, contenedorId) {
+        const contenedor = document.getElementById(contenedorId);
+        
+        pubs.sort((a, b) => {
+            if (b.year !== a.year) return b.year - a.year;
+            return (b.monthVal || 0) - (a.monthVal || 0);
+        });
+
+        contenedor.innerHTML = pubs.length > 0 ? '' : '<p class="text-muted p-3">No hay registros.</p>';
+        
+        pubs.forEach(pub => {
+            let authors = pub.author ? pub.author.replace(/ and /g, ', ') : "";
+            authors = authors.replace(/(García, J\.|Fernández‐Carabantes, J\.)/g, '<strong>$1</strong>');
+            const fecha = pub.monthName ? `${pub.monthName} ${pub.year}` : pub.year;
+
+            contenedor.innerHTML += `
+                <div class="pub-item">
+                    <a href="${pub.url || '#'}" target="_blank" class="pub-title d-block mb-1">${pub.title}</a>
+                    <div class="pub-authors" style="font-size: 0.85rem;">${authors}</div>
+                    <div class="pub-meta">
+                        <i class="fas fa-bookmark me-1"></i> ${pub.source || 'Publicación'} | 
+                        <i class="fas fa-calendar-alt me-1"></i> ${fecha}
+                    </div>
+                </div>`;
+        });
+    }
+
+    // Ejecutar al cargar
+    inicializarPublicaciones();
+
+    // Contenido proyectos
+    fetch('assets/proyectos.json')
+        .then(response => response.json())
+        .then(data => {
+            const contenedorCards = document.getElementById('contenedor-proyectos');
+            const contenedorModales = document.createElement('div');
+            contenedorModales.id = "modales-dinamicos";
+            document.body.appendChild(contenedorModales);
+
+            data.sort((a, b) => b.id - a.id); 
+
+            data.forEach(item => {
+                // Portfolio cards
+                const card = `
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModalDiv${item.id}">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="${item.imagen_card}" alt="${item.titulo}" />
+                        </div>
+                    </div>
+                `;
+                contenedorCards.innerHTML += card;
+
+                // --- LÓGICA CONDICIONAL PARA EL CONTENIDO MULTIMEDIA ---
+                let multimediaHTML = '';
+                if (item.youtube_id && item.youtube_id !== "") {
+                    // Si hay YouTube, creamos el embed responsivo
+                    multimediaHTML = `
+                        <div class="ratio ratio-16x9 mb-5">
+                            <iframe src="https://www.youtube.com/embed/${item.youtube_id}" title="YouTube video" allowfullscreen></iframe>
+                        </div>`;
+                } else if (item.imagen_modal && item.imagen_modal !== "") {
+                    // Si no hay YouTube pero hay imagen de detalle
+                    multimediaHTML = `<img class="img-fluid rounded mb-5" src="${item.imagen_modal}" alt="..." />`;
+                }
+
+                // Portfolio modal
+                const modal = `
+                    <div class="portfolio-modal modal fade" id="portfolioModalDiv${item.id}" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                <div class="modal-body text-center pb-5">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8">
+                                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">${item.titulo}</h2>
+                                                <div class="divider-custom">
+                                                </div>
+                                                
+                                                ${multimediaHTML} <p class="mb-4 text-start">${item.descripcion}</p>
+                                                <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                                    <i class="fas fa-external-link-alt fa-fw"></i> Más información
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                contenedorModales.innerHTML += modal;
+            });
+
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.body.classList.add('loaded'); // Mostrar aunque falle
+        });
+
+    // Contenido divulgación
+    fetch('assets/divulgacion.json')
         .then(response => response.json())
         .then(data => {
             const contenedorCards = document.getElementById('contenedor-divulgacion');
@@ -172,13 +387,16 @@
                 contenedorModales.innerHTML += modal;
             });
 
-            // Mostramos la página una vez inyectado el contenido
-            document.body.classList.add('loaded');
         })
         .catch(error => {
             console.error('Error:', error);
             document.body.classList.add('loaded'); // Mostrar aunque falle
         });
+
+
+
+        // Mostramos la página una vez inyectado el contenido
+        document.body.classList.add('loaded');
 </script>
 
     </body>

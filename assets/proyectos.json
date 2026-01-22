@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titulo": "DigiVolCan",
+    "descripcion": "",
+    "imagen_card": "assets/img/proyectos/digivolcan.png",
+    "imagen_modal": "assets/img/proyectos/digivolcan.png",
+    "link": "https://www.aei.gob.es/",
+    "video": ""
+  },
+
+  {
+    "id": 2,
+    "titulo": "MuSTARD",
+    "descripcion": "",
+    "imagen_card": "assets/img/proyectos/mu.png",
+    "imagen_modal": "assets/img/proyectos/mustard.png",
+
+    "link": "https://codas.ugr.es/mustard/en/",
+    "video": ""
+  }
+
+]

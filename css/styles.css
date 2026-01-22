@@ -10842,7 +10842,7 @@ html {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -11060,4 +11060,63 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+
+/* Custom Publications Section Styles */
+.scroll-container {
+    max-height: 450px; /* Altura contenida para la lista */
+    overflow-y: auto;
+    padding-right: 10px;
+    border: 2px solid #eff2f3; /* Color suave de fondo */
+    border-radius: 0.5rem;
+    background-color: #fff;
+    scrollbar-width: thin;
+    scrollbar-color: #1abc9c #eff2f3; /* Colores primarios del tema */
+}
+
+/* Personalización del scroll para Chrome/Safari */
+.scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #1abc9c;
+    border-radius: 10px;
+}
+
+.pub-item {
+    padding: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s ease;
+}
+
+.pub-item:hover {
+    background-color: #f8f9fa; /* Efecto sutil al pasar el ratón */
+}
+
+.pub-title {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    color: #2c3e50; /* Color secundario del tema */
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.pub-title:hover {
+    color: #1abc9c; /* Color primario al hacer hover */
+}
+
+.pub-authors {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #5a6268;
+    margin: 0.3rem 0;
+}
+
+.pub-meta {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1abc9c; /* Resalta la revista y fecha con el color de acento */
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
 }
