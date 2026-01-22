@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "titulo": "Ciencia Ambulante",
+        "imagen_card": "assets/img/divulgacion/ciencia_ambulante.png",
+        "imagen_modal": "assets/img/divulgacion/destino_luna.jpg",
+        "descripcion": "Ciencia ambulante es un proyecto educativo en el que participé en 2020 como parte del departamento de educación del Parque de las Ciencias de Granada. Desarrollamos diferentes talleres educativos capaces de ser totalmente contenidos en cajas (incluyendo material específico y guías) para prestarlo a diferentes centros de enseñanza. Concretamente, contribuí desarrollando el taller \"Agua corriente\" y  contribuyendo al taller \"Destino: la Luna\"",
+        "link": "https://www.parqueciencias.com/area-educativa/recursos/prestamo-de-material/"
+    },
+    {
+        "id": 2,
+        "titulo": "El Quid",
+        "imagen_card": "assets/img/divulgacion/el_quid.png",
+        "imagen_modal": "assets/img/divulgacion/el_quid_webpage.png",
+        "descripcion": "El Quid es un proyecto de divulgación científica que comencé en 2023. Consiste en una página web con diversos artículos divulgativos, explicando conceptos científicos a partir de experiencias cotidianas y a través de simulaciones interactivas acopladas en la propia web. Aunque el proyecto actualmente está abandonado, aun se puede visitar la web que desarrollé, leer los artículos y jugar con las simulaciones. (La web del enlace puede tardar un tiempo en cargar).",
+        "link": "https://elquid.streamlit.app"
+    },
+    {
+        "id": 3,
+        "titulo": "Crea Innova educa",
+        "imagen_card": "assets/img/divulgacion/crea_innova_educa.png",
+        "imagen_modal": "",
+        "descripcion": "CreaInnovaEduca-UGR es un proyecto interdisciplinar que pretende crear espacios abiertos flexibles y participativos para la colaboración y el aprendizaje en proyectos que tengan impacto en la sociedad y el entorno. Participé en la edición de 2024 con un poster científico y divulgativo titulado \"El papel del polen en la formación de núcleos de hielo\" desarrollado como parte de la segunda edición del curso \"Desarrollo de proyectos Interdisciplinares en Ciencias\".",
+        "link": "https://interciencias.ugr.es/polen-nubes/polen-nubes-ii/"
+    },
+    {
+        "id": 4,
+        "titulo": "Feria de las Ingenierías",
+        "imagen_card": "assets/img/divulgacion/feria_ingenierias.png",
+        "imagen_modal": "assets/img/divulgacion/decisiones_espacio_temporales.png",
+        "youtube_id": "iRIYH4MG3pg",
+        "descripcion": "La feria de las ingenierías es un evento de divulgación científica cuyo objetivo es dar a conocer el mundo de la Ingeniería a estudiantes de ESO y Bachillerato. En la edición de 2025, participé con un taller llamado \"Decisiones espacio-temporales\", que impartí a un grupo de estudiantes de 1º de bachillerato.", 
+        "link": "https://www.youtube.com/watch?v=iRIYH4MG3pg"
+    },
+    {
+        "id": 5,
+        "titulo": "Three Minute Thesis",
+        "imagen_card": "assets/img/divulgacion/3mt.png",
+        "imagen_modal": "assets/img/divulgacion/3mt.png",
+        "youtube_id": "dFqPrR9eUjM",
+        "descripcion": "3MT (Three Minute Thesis) es una competición originaria de la Universidad de Queensland en la que los participantes expone su tesis doctoral en menos de tres minutos. En agosto de 2025 participé en esta competición en el congreso internacional IGARSS2025 en Brisbane (Australia) donde obtuve el primer puesto de 101 participantes y IEEE Geoscience and Remote Sensing Society me dio el premio \"Excellence in Technical Communication Student Prize Award\" ", 
+        "link": "https://www.youtube.com/watch?v=dFqPrR9eUjM"
+    },
+    {
+        "id": 6,
+        "titulo": "Noche Europea de l@s investigador@s",
+        "imagen_card": "assets/img/divulgacion/noche_europea.png",
+        "imagen_modal": "assets/img/divulgacion/noche_europea_presentacion.png",
+        "descripcion": "La Noche Europea de l@s Investigador@s es un evento divulgativo que se repite anualmente en muchas ciudades europeas. En 2019 y 2021 participé como voluntario. En 2025 participé como investigador con los talleres \"Decisiones espacio-temporales\" y \"¿Cuándo falla la ciencia?\".", 
+        "link": "https://lanochedelosinvestigadores.fundaciondescubre.es/investigador/jesus-garcia-sanchez/"
+    }
+
+]
