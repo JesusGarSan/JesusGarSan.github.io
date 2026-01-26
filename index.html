@@ -92,8 +92,6 @@
             </div>
         </section>
 
-
-
         <!-- Proyectos de investigación -->
         <section class="page-section portfolio" id="proyectos">
             <div class="container">
@@ -262,7 +260,7 @@ const mesesMap = {
                 // Portfolio cards
                 const card = `
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModalDiv${item.id}">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#proyectoModalDiv${item.id}">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -287,7 +285,7 @@ const mesesMap = {
 
                 // Portfolio modal
                 const modal = `
-                    <div class="portfolio-modal modal fade" id="portfolioModalDiv${item.id}" tabindex="-1" aria-hidden="true">
+                    <div class="portfolio-modal modal fade" id="proyectoModalDiv${item.id}" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
@@ -335,7 +333,7 @@ const mesesMap = {
                 // Portfolio cards
                 const card = `
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModalDiv${item.id}">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#divulgacionModalDiv${item.id}">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -360,7 +358,7 @@ const mesesMap = {
 
                 // Portfolio modal
                 const modal = `
-                    <div class="portfolio-modal modal fade" id="portfolioModalDiv${item.id}" tabindex="-1" aria-hidden="true">
+                    <div class="portfolio-modal modal fade" id="divulgacionModalDiv${item.id}" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
