@@ -4,7 +4,8 @@
         "titulo": "Ciencia Ambulante",
         "imagen_card": "assets/img/divulgacion/ciencia_ambulante.png",
         "imagen_modal": "assets/img/divulgacion/destino_luna.jpg",
-        "descripcion": "Ciencia ambulante es un proyecto educativo en el que participé en 2020 como parte del departamento de educación del Parque de las Ciencias de Granada. Desarrollamos diferentes talleres educativos capaces de ser totalmente contenidos en cajas (incluyendo material específico y guías) para prestarlo a diferentes centros de enseñanza. Concretamente, contribuí desarrollando el taller \"Agua corriente\" y  contribuyendo al taller \"Destino: la Luna\"",
+        "descripcion_es": "Ciencia ambulante es un proyecto educativo en el que participé en 2020 como parte del departamento de educación del Parque de las Ciencias de Granada. Desarrollamos diferentes talleres educativos capaces de ser totalmente contenidos en cajas (incluyendo material específico y guías) para prestarlo a diferentes centros de enseñanza. Concretamente, contribuí desarrollando el taller \"Agua corriente\" y  contribuyendo al taller \"Destino: la Luna\"",
+        "descripcion_en": "Ciencia ambulante is an educational project I participated in during 2020 as part of the education department of the Parque de las Ciencias de Granada. We developed different educational workshops designed to be entirely contained in boxes (including specific materials and guides) to be loaned to various educational centers. Specifically, I contributed by developing the \"Agua corriente\" workshop and assisting with the \"Destino: la Luna\" workshop",
         "link": "https://www.parqueciencias.com/area-educativa/recursos/prestamo-de-material/"
     },
     {
@@ -12,7 +13,8 @@
         "titulo": "El Quid",
         "imagen_card": "assets/img/divulgacion/el_quid.png",
         "imagen_modal": "assets/img/divulgacion/el_quid_webpage.png",
-        "descripcion": "El Quid es un proyecto de divulgación científica que comencé en 2023. Consiste en una página web con diversos artículos divulgativos, explicando conceptos científicos a partir de experiencias cotidianas y a través de simulaciones interactivas acopladas en la propia web. Aunque el proyecto actualmente está abandonado, aun se puede visitar la web que desarrollé, leer los artículos y jugar con las simulaciones. (La web del enlace puede tardar un tiempo en cargar).",
+        "descripcion_es": "El Quid es un proyecto de divulgación científica que comencé en 2023. Consiste en una página web con diversos artículos divulgativos, explicando conceptos científicos a partir de experiencias cotidianas y a través de simulaciones interactivas acopladas en la propia web. Aunque el proyecto actualmente está abandonado, aun se puede visitar la web que desarrollé, leer los artículos y jugar con las simulaciones. (La web del enlace puede tardar un tiempo en cargar).",
+        "descripcion_en": "El Quid is a science outreach project that I started in 2023. It consists of a website with several popular science articles, explaining scientific concepts based on everyday experiences and through interactive simulations embedded directly into the site. Although the project is currently discontinued, you can still visit the website I developed to read the articles and interact with the simulations. (The link may take some time to load).",
         "link": "https://elquid.streamlit.app"
     },
     {
@@ -20,7 +22,8 @@
         "titulo": "Crea Innova educa",
         "imagen_card": "assets/img/divulgacion/crea_innova_educa.png",
         "imagen_modal": "",
-        "descripcion": "CreaInnovaEduca-UGR es un proyecto interdisciplinar que pretende crear espacios abiertos flexibles y participativos para la colaboración y el aprendizaje en proyectos que tengan impacto en la sociedad y el entorno. Participé en la edición de 2024 con un poster científico y divulgativo titulado \"El papel del polen en la formación de núcleos de hielo\" desarrollado como parte de la segunda edición del curso \"Desarrollo de proyectos Interdisciplinares en Ciencias\".",
+        "descripcion_es": "CreaInnovaEduca-UGR es un proyecto interdisciplinar que pretende crear espacios abiertos flexibles y participativos para la colaboración y el aprendizaje en proyectos que tengan impacto en la sociedad y el entorno. Participé en la edición de 2024 con un poster científico y divulgativo titulado \"El papel del polen en la formación de núcleos de hielo\" desarrollado como parte de la segunda edición del curso \"Desarrollo de proyectos Interdisciplinares en Ciencias\".",
+        "descripcion_en": "CreaInnovaEduca-UGR is an interdisciplinary project that aims to create open, flexible, and participatory spaces for collaboration and learning in projects with a social and environmental impact. I participated in the 2024 edition with a scientific and outreach poster titled \"El papel del polen en la formación de núcleos de hielo\", developed as part of the second edition of the course \"Desarrollo de proyectos Interdisciplinares en Ciencias\".",
         "link": "https://interciencias.ugr.es/polen-nubes/polen-nubes-ii/"
     },
     {
@@ -29,7 +32,8 @@
         "imagen_card": "assets/img/divulgacion/feria_ingenierias.png",
         "imagen_modal": "assets/img/divulgacion/decisiones_espacio_temporales.png",
         "youtube_id": "iRIYH4MG3pg",
-        "descripcion": "La feria de las ingenierías es un evento de divulgación científica cuyo objetivo es dar a conocer el mundo de la Ingeniería a estudiantes de ESO y Bachillerato. En la edición de 2025, participé con un taller llamado \"Decisiones espacio-temporales\", que impartí a un grupo de estudiantes de 1º de bachillerato.", 
+        "descripcion_es": "La feria de las ingenierías es un evento de divulgación científica cuyo objetivo es dar a conocer el mundo de la Ingeniería a estudiantes de ESO y Bachillerato. En la edición de 2025, participé con un taller llamado \"Decisiones espacio-temporales\", que impartí a un grupo de estudiantes de 1º de bachillerato.", 
+        "descripcion_en": "La feria de las ingenierías is a science outreach event whose goal is to introduce the world of Engineering to secondary school and high school students. In the 2025 edition, I participated with a workshop called \"Decisiones espacio-temporales\", which I taught to a group of 11th-grade students.",
         "link": "https://www.youtube.com/watch?v=iRIYH4MG3pg"
     },
     {
@@ -38,7 +42,8 @@
         "imagen_card": "assets/img/divulgacion/3mt.png",
         "imagen_modal": "assets/img/divulgacion/3mt.png",
         "youtube_id": "dFqPrR9eUjM",
-        "descripcion": "3MT (Three Minute Thesis) es una competición originaria de la Universidad de Queensland en la que los participantes expone su tesis doctoral en menos de tres minutos. En agosto de 2025 participé en esta competición en el congreso internacional IGARSS2025 en Brisbane (Australia) donde obtuve el primer puesto de 101 participantes y IEEE Geoscience and Remote Sensing Society me dio el premio \"Excellence in Technical Communication Student Prize Award\" ", 
+        "descripcion_es": "3MT (Three Minute Thesis) es una competición originaria de la Universidad de Queensland en la que los participantes expone su tesis doctoral en menos de tres minutos. En agosto de 2025 participé en esta competición en el congreso internacional IGARSS2025 en Brisbane (Australia) donde obtuve el primer puesto de 101 participantes y IEEE Geoscience and Remote Sensing Society me dio el premio \"Excellence in Technical Communication Student Prize Award\" ", 
+        "descripcion_en": "3MT (Three Minute Thesis) is a competition originating from the University of Queensland where participants present their doctoral thesis in less than three minutes. In August 2025, I participated in this competition at the IGARSS2025 international conference in Brisbane (Australia), where I won first place out of 101 participants and the IEEE Geoscience and Remote Sensing Society granted me the \"Excellence in Technical Communication Student Prize Award\".",
         "link": "https://www.youtube.com/watch?v=dFqPrR9eUjM"
     },
     {
@@ -46,7 +51,8 @@
         "titulo": "Noche Europea de l@s investigador@s",
         "imagen_card": "assets/img/divulgacion/noche_europea.png",
         "imagen_modal": "assets/img/divulgacion/noche_europea_presentacion.png",
-        "descripcion": "La Noche Europea de l@s Investigador@s es un evento divulgativo que se repite anualmente en muchas ciudades europeas. En 2019 y 2021 participé como voluntario. En 2025 participé como investigador con los talleres \"Decisiones espacio-temporales\" y \"¿Cuándo falla la ciencia?\".", 
+        "descripcion_es": "La Noche Europea de l@s Investigador@s es un evento divulgativo que se repite anualmente en muchas ciudades europeas. En 2019 y 2021 participé como voluntario. En 2025 participé como investigador con los talleres \"Decisiones espacio-temporales\" y \"¿Cuándo falla la ciencia?\".", 
+        "descripcion_en": "La Noche Europea de l@s Investigador@s is an outreach event held annually in many European cities. In 2019 and 2021, I participated as a volunteer. In 2025, I participated as a researcher with the workshops \"Decisiones espacio-temporales\" and \"¿Cuándo falla la ciencia?\".",
         "link": "https://lanochedelosinvestigadores.fundaciondescubre.es/investigador/jesus-garcia-sanchez/"
     }
 

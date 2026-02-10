@@ -1,0 +1,55 @@
+{
+  "es": {
+    "nav": {
+      "brand": "Jesús García Sánchez",
+      "publicaciones": "Publicaciones",
+      "proyectos": "Proyectos de investigación",
+      "divulgacion": "Divulgación Científica"
+    },
+    "hero": {
+      "cv_button": "Descarga mi CV",
+      "tagline": "Físico y Biomatemático - Doctorando en la Universidad de Granada - Divulgador Científico",
+      "bio": "¡Buenas! Me llamo Jesús, y soy estudiante de doctorado en el grupo de investigación <a href='https://codas.ugr.es/' target='_blank'>CoDaS Lab</a> de la <a href='https://www.ugr.es/' target='_blank'>Universidad de Granada</a>. Mi tesis se centra en el uso de estadística multivariante en aplicaciones como la monitorización sísmica y predicción de erupciones volcánicas.<br><br>Soy un apasionado de la divulgación científica y las artes marciales, aunque en esta web sólo encontrarás información acerca de una de estas dos cosas."
+    },
+    "sections": {
+      "publicaciones": "Publicaciones",
+      "articulos": "Artículos",
+      "congresos": "Congresos y Conferencias",
+      "proyectos": "Proyectos de investigación",
+      "divulgacion": "Divulgación científica"
+    },
+    "footer": {
+      "contacto": "Contacto",
+      "en_la_web": "En la Web",
+      "ubicacion": "Ubicación",
+      "copyright": "Copyright &copy; Jesús García Sánchez 2026"
+    }
+  },
+
+  "en": {
+    "nav": {
+      "brand": "Jesús García Sánchez",
+      "publicaciones": "Publications",
+      "proyectos": "Resarch projects",
+      "divulgacion": "Science Communication"
+    },
+    "hero": {
+      "cv_button": "Download my CV",
+      "tagline": "Physicist, Biomathematician - PhD Candidate at the UGR - Science Communicator",
+      "bio": "Hi! My name is Jesús. I am a PhD student at the research group <a href='https://codas.ugr.es/' target='_blank'>CoDaS Lab</a> from the <a href='https://www.ugr.es/' target='_blank'>University of Granada</a>. My thesis focuses on the usage of Multivariate Statistics in applications such as seismic monitoring and volcanic eruption forecasting.<br><br> I am passionate about science communication and martial arts, though you will only find information on one of those two things here."
+    },
+    "sections": {
+      "publicaciones": "Publications",
+      "articulos": "Articles",
+      "congresos": "Conferences",
+      "proyectos": "Resarch projects",
+      "divulgacion": "Science Communication"
+    },
+    "footer": {
+      "contacto": "Contact",
+      "en_la_web": "On the web",
+      "ubicacion": "Location",
+      "copyright": "Copyright &copy; Jesús García Sánchez 2026"
+    }
+  }
+}

@@ -5,68 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Jesús García Sánchez</title>
-        <!-- Favicon-->
+        <title data-key="nav.brand">nav.brand</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Jesús García Sánchez</a>
+                <a class="navbar-brand" href="#page-top" data-key="nav.brand"></a>
+                <div class="d-flex align-items-center order-lg-last ms-lg-4">
+                    <span class="lang-switch active" data-lang="es" onclick="cambiarIdioma('es')">ES</span>
+                    <span class="text-white mx-1">|</span>
+                    <span class="lang-switch" data-lang="en" onclick="cambiarIdioma('en')">EN</span>
+                </div>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
+                    <span data-key="nav.menu"></span>
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#publicaciones">Publicaciones</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#proyectos">Proyectos de investigación</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divulgacion">Divulgación Científica</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#publicaciones" data-key="nav.publicaciones"></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#proyectos" data-key="nav.proyectos"></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divulgacion" data-key="nav.divulgacion"></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
         <header class="masthead text-white text-center">
             <div class="container d-flex align-items-center flex-column flex-lg-row text-lg-start">
                 <div class="d-flex flex-column align-items-center mb-5 mb-lg-0 me-lg-5">
                     <img class="masthead-avatar mb-3" src="assets/img/foto.svg" alt="Jesús García Sánchez" />
                     <a class="btn btn-xl btn-outline-light" href="assets/CV.pdf" download>
                         <i class="fas fa-download me-2"></i>
-                        Descarga mi CV
+                        <span data-key="hero.cv_button"></span>
                     </a>
                 </div>
                 
                 <div class="flex-grow-1">
-                    <h1 class="masthead-heading text-uppercase mb-0">Jesús García Sánchez</h1>
+                    <h1 class="masthead-heading text-uppercase mb-0" data-key="nav.brand"></h1>
                     <div class="divider-custom divider-light"></div>
-                    <p class="masthead-subheading font-weight-light mb-4">Físico y Biomatemático - Doctorando en la Universidad de Granada - Divulgador Científico</p>
+                    <p class="masthead-subheading font-weight-light mb-4" data-key="hero.tagline"></p>
                     
                     <div class="masthead-about text-start">
-                        <p class="lead">
-                            ¡Buenas! Me llamo Jesús, y soy estudiante de doctorado en el grupo de investigación <a href="https://codas.ugr.es/" target="_blank">CoDaS Lab</a> de la <a href="https://https://www.ugr.es//" target="_blank">Universidad de Granada</a>.
-                            Mi tesis se centra en el uso de estadística multivariante en aplicaciones como la monitorización sísmica y predicción de erupciones volcánicas.<br><br>
-                            Soy un apasionado de la divulgación científica y las artes marciales, aunque en esta web sólo encontrarás información acerca de una de estas dos cosas.
-                        </p>
+                        <p class="lead" data-key="hero.bio"></p>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Publications-->
         <section class="page-section" id="publicaciones">
             <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Publicaciones</h2>
-                <div class="divider-custom">
-                </div>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" data-key="sections.publicaciones"></h2>
+                <div class="divider-custom"></div>
                 
                 <div class="row justify-content-center mb-4">
                     <div class="col-lg-10 text-center">
@@ -78,79 +71,102 @@
 
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                        <h3 class="text-center text-secondary text-uppercase" style="font-size: 1.2rem;">Artículos</h3>
-                        <div id="contenedor-articulos" class="scroll-container shadow-sm">
-                            </div>
+                        <h3 class="text-center text-secondary text-uppercase" style="font-size: 1.2rem;" data-key="sections.articulos"></h3>
+                        <div id="contenedor-articulos" class="scroll-container shadow-sm"></div>
                     </div>
-
                     <div class="col-md-6 mb-4">
-                        <h3 class="text-center text-secondary text-uppercase" style="font-size: 1.2rem;">Congresos y Conferencias</h3>
-                        <div id="contenedor-congresos" class="scroll-container shadow-sm">
-                            </div>
+                        <h3 class="text-center text-secondary text-uppercase" style="font-size: 1.2rem;" data-key="sections.congresos"></h3>
+                        <div id="contenedor-congresos" class="scroll-container shadow-sm"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Proyectos de investigación -->
         <section class="page-section portfolio" id="proyectos">
             <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Proyectos de investigación</h2>
-                <div class="divider-custom">
-                </div>
-                <div class="row justify-content-center" id="contenedor-proyectos">
-                    </div>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" data-key="sections.proyectos"></h2>
+                <div class="divider-custom"></div>
+                <div class="row justify-content-center" id="contenedor-proyectos"></div>
             </div>
         </section>
-        <!-- Science Communication Section-->
+
         <section class="page-section portfolio" id="divulgacion">
             <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Divulgación científica</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" data-key="sections.divulgacion"></h2>
                 <div class="divider-custom"></div>
                 <div id="contenedor-divulgacion" class="row justify-content-center"></div>
             </div>
         </section>    
 
- 
-        <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
-                    <!-- Footer Contact-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Contacto</h4>
-                        <p class="lead mb-0">
-                            gsus [arroba] ugr.es
-                        </p>
+                        <h4 class="text-uppercase mb-4" data-key="footer.contacto"></h4>
+                        <p class="lead mb-0">gsus [arroba] ugr.es</p>
                     </div>
-                    <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/JesusGarSan" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jesusgarsan/" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://codas.ugr.es/" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>
+                        <h4 class="text-uppercase mb-4" data-key="footer.en_la_web"></h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/JesusGarSan" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/jesusgarsan/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://codas.ugr.es/" target="_blank"><i class="fas fa-globe"></i></a>
                     </div>
-                    <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Ubicación</h4>
-                        <p class="small mb-0">
-                            CITIC-UGR
-                            <br />
-                            Calle Periodista Rafael Gómez Montero, 2, Chana, 18014 Granada
-                        </p>
+                        <h4 class="text-uppercase mb-4" data-key="footer.ubicacion"></h4>
+                        <p class="small mb-0">CITIC-UGR<br />Calle Periodista Rafael Gómez Montero, 2, Chana, 18014 Granada</p>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- Copyright Section-->
+
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Jesús García Sánchez 2026</small></div>
+            <div class="container"><small data-key="footer.copyright"></small></div>
         </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-const mesesMap = {
+    // Variable global para saber qué idioma estamos usando
+    let idiomaActual = 'es';
+
+    async function cambiarIdioma(nuevoIdioma) {
+        if (nuevoIdioma === idiomaActual) return;
+        
+        // Antes de cargar los nuevos contenidos en cambiarIdioma
+        const modalesAntiguos = document.querySelectorAll('.portfolio-modal');
+        modalesAntiguos.forEach(m => m.remove());
+        try {
+            const response = await fetch('assets/text.json');
+            const traducciones = await response.json();
+            const textos = traducciones[nuevoIdioma];
+
+            // ... (tus líneas de localStorage y URL) ...
+
+            // 3. Traducir elementos estáticos
+            document.querySelectorAll('[data-key]').forEach(elemento => {
+                const clave = elemento.getAttribute('data-key');
+                const textoTraducido = clave.split('.').reduce((obj, i) => obj[i], textos);
+                if (textoTraducido) elemento.innerHTML = textoTraducido;
+            });
+
+            // 4. Actualizar botones
+            actualizarBotonesIdioma(nuevoIdioma);
+
+            // 5. IMPORTANTE: Cargar publicaciones y proyectos
+            // Pasamos "textos" que contiene el diccionario del idioma seleccionado
+            inicializarContenidosDinamicos(textos); 
+
+            idiomaActual = nuevoIdioma;
+            document.documentElement.lang = nuevoIdioma;
+
+        } catch (error) {
+            console.error("Error al cambiar el idioma:", error);
+        }
+    }
+
+
+    // --- MANTENEMOS TU LÓGICA DE BIBTEX Y JSON ---
+    const mesesMap = {
         'jan': { val: 0, nombre: 'enero' }, 'feb': { val: 1, nombre: 'febrero' },
         'mar': { val: 2, nombre: 'marzo' }, 'apr': { val: 3, nombre: 'abril' },
         'may': { val: 4, nombre: 'mayo' }, 'jun': { val: 5, nombre: 'junio' },
@@ -161,31 +177,18 @@ const mesesMap = {
 
     function parseBibtexByTag(text, tagToFilter) {
         const entries = [];
-        // Separamos el texto buscando el patrón @tipo{
-        const regex = new RegExp(`@${tagToFilter}`, 'gi');
         const blocks = text.split(/@/i).slice(1);
-
         blocks.forEach(block => {
-            // Comprobamos si este bloque empieza por el tipo que queremos (article o inproceedings)
             if (block.toLowerCase().startsWith(tagToFilter.toLowerCase())) {
                 const entry = {};
-                
-                // Título
                 const titleMatch = block.match(/title\s*=\s*\{(.+?)\}/is);
                 if (titleMatch) entry.title = titleMatch[1].replace(/\s+/g, ' ').replace(/[\{\}]/g, '');
-
-                // Autores
                 const authorMatch = block.match(/author\s*=\s*\{(.+?)\}/is);
                 if (authorMatch) entry.author = authorMatch[1].replace(/\s+/g, ' ');
-
-                // Fuente: journal para artículos, booktitle para congresos
                 const sourceMatch = block.match(/(journal|booktitle)\s*=\s*\{(.+?)\}/is);
                 if (sourceMatch) entry.source = sourceMatch[2];
-
-                // Año y Mes
                 const yearMatch = block.match(/year\s*=\s*\{?(\d{4})\}?/i);
                 if (yearMatch) entry.year = parseInt(yearMatch[1]);
-
                 const monthMatch = block.match(/month\s*=\s*\{?(\w+)\}?/i);
                 if (monthMatch) {
                     const mesKey = monthMatch[1].toLowerCase().substring(0, 3);
@@ -194,42 +197,37 @@ const mesesMap = {
                         entry.monthName = mesesMap[mesKey].nombre;
                     }
                 }
-                
                 const urlMatch = block.match(/url\s*=\s*\{(.+?)\}/i);
                 if (urlMatch) entry.url = urlMatch[1];
-
                 if (entry.title) entries.push(entry);
             }
         });
         return entries;
     }
 
-    function inicializarPublicaciones() {
+    function inicializarContenidosDinamicos(langData) {
+        // Cargar Publicaciones
         fetch('assets/publicaciones.bib')
             .then(response => response.text())
             .then(text => {
-                // Cargamos artículos filtrando por @article
-                renderizarLista(parseBibtexByTag(text, 'article'), 'contenedor-articulos');
-                // Cargamos congresos filtrando por @inproceedings
-                renderizarLista(parseBibtexByTag(text, 'inproceedings'), 'contenedor-congresos');
+                renderizarLista(parseBibtexByTag(text, 'article'), 'contenedor-articulos', langData.sections.no_records);
+                renderizarLista(parseBibtexByTag(text, 'inproceedings'), 'contenedor-congresos', langData.sections.no_records);
             });
+
+        // Cargar Proyectos y Divulgación
+        cargarSeccionInfinita('assets/proyectos.json', 'contenedor-proyectos', 'proyectoModalDiv');
+        cargarSeccionInfinita('assets/divulgacion.json', 'contenedor-divulgacion', 'divulgacionModalDiv');
     }
 
-    function renderizarLista(pubs, contenedorId) {
+    function renderizarLista(pubs, contenedorId, noRecordsText) {
         const contenedor = document.getElementById(contenedorId);
-        
-        pubs.sort((a, b) => {
-            if (b.year !== a.year) return b.year - a.year;
-            return (b.monthVal || 0) - (a.monthVal || 0);
-        });
-
-        contenedor.innerHTML = pubs.length > 0 ? '' : '<p class="text-muted p-3">No hay registros.</p>';
+        pubs.sort((a, b) => (b.year !== a.year) ? b.year - a.year : (b.monthVal || 0) - (a.monthVal || 0));
+        contenedor.innerHTML = pubs.length > 0 ? '' : `<p class="text-muted p-3">${noRecordsText}</p>`;
         
         pubs.forEach(pub => {
             let authors = pub.author ? pub.author.replace(/ and /g, ', ') : "";
             authors = authors.replace(/(García, J\.|Fernández‐Carabantes, J\.)/g, '<strong>$1</strong>');
             const fecha = pub.monthName ? `${pub.monthName} ${pub.year}` : pub.year;
-
             contenedor.innerHTML += `
                 <div class="pub-item">
                     <a href="${pub.url || '#'}" target="_blank" class="pub-title d-block mb-1">${pub.title}</a>
@@ -242,64 +240,62 @@ const mesesMap = {
         });
     }
 
-    // Ejecutar al cargar
-    inicializarPublicaciones();
-
-    // Contenido proyectos
-    fetch('assets/proyectos.json')
+function cargarSeccionInfinita(url, contenedorId, modalPrefix) {
+    fetch(url)
         .then(response => response.json())
         .then(data => {
-            const contenedorCards = document.getElementById('contenedor-proyectos');
-            const contenedorModales = document.createElement('div');
-            contenedorModales.id = "modales-dinamicos";
-            document.body.appendChild(contenedorModales);
-
+            const contenedorCards = document.getElementById(contenedorId);
+            // Limpiamos el contenedor para evitar duplicados al cambiar idioma
+            contenedorCards.innerHTML = ""; 
+            
             data.sort((a, b) => b.id - a.id); 
 
             data.forEach(item => {
-                // Portfolio cards
-                const card = `
+                // Selección dinámica de textos según el idioma actual
+                const titulo = item[`titulo_${idiomaActual}`] || item.titulo_es || item.titulo;
+                const descripcion = item[`descripcion_${idiomaActual}`] || item.descripcion_es || item.descripcion;
+
+                // 1. Renderizado de la Card (Miniatura)
+                contenedorCards.innerHTML += `
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#proyectoModalDiv${item.id}">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#${modalPrefix}${item.id}">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="${item.imagen_card}" alt="${item.titulo}" />
+                            <img class="img-fluid" src="${item.imagen_card}" alt="${titulo}" />
                         </div>
-                    </div>
-                `;
-                contenedorCards.innerHTML += card;
+                    </div>`;
 
-                // --- LÓGICA CONDICIONAL PARA EL CONTENIDO MULTIMEDIA ---
+                // 2. Lógica de Multimedia (YouTube o Imagen)
                 let multimediaHTML = '';
                 if (item.youtube_id && item.youtube_id !== "") {
-                    // Si hay YouTube, creamos el embed responsivo
                     multimediaHTML = `
                         <div class="ratio ratio-16x9 mb-5">
                             <iframe src="https://www.youtube.com/embed/${item.youtube_id}" title="YouTube video" allowfullscreen></iframe>
                         </div>`;
                 } else if (item.imagen_modal && item.imagen_modal !== "") {
-                    // Si no hay YouTube pero hay imagen de detalle
-                    multimediaHTML = `<img class="img-fluid rounded mb-5" src="${item.imagen_modal}" alt="..." />`;
+                    multimediaHTML = `<img class="img-fluid rounded mb-5" src="${item.imagen_modal}" alt="${titulo}" />`;
                 }
 
-                // Portfolio modal
+                // 3. Renderizado del Modal (Detalle)
                 const modal = `
-                    <div class="portfolio-modal modal fade" id="proyectoModalDiv${item.id}" tabindex="-1" aria-hidden="true">
+                    <div class="portfolio-modal modal fade" id="${modalPrefix}${item.id}" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
-                                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                <div class="modal-header border-0">
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
                                 <div class="modal-body text-center pb-5">
                                     <div class="container">
                                         <div class="row justify-content-center">
                                             <div class="col-lg-8">
-                                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">${item.titulo}</h2>
-                                                <div class="divider-custom">
-                                                </div>
-                                                
-                                                ${multimediaHTML} <p class="mb-4 text-start">${item.descripcion}</p>
+                                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">${titulo}</h2>
+                                                <div class="divider-custom"></div>
+                                                ${multimediaHTML}
+                                                <p class="mb-4 text-start">${descripcion}</p>
                                                 <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                    <i class="fas fa-external-link-alt fa-fw"></i> Más información
+                                                    <i class="fas fa-external-link-alt fa-fw"></i> 
+                                                    ${idiomaActual === 'es' ? 'Más información' : 'More information'}
                                                 </a>
                                             </div>
                                         </div>
@@ -307,95 +303,33 @@ const mesesMap = {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                `;
-                contenedorModales.innerHTML += modal;
+                    </div>`;
+                document.body.insertAdjacentHTML('beforeend', modal);
             });
-
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.body.classList.add('loaded'); // Mostrar aunque falle
         });
+}
 
-    // Contenido divulgación
-    fetch('assets/divulgacion.json')
-        .then(response => response.json())
-        .then(data => {
-            const contenedorCards = document.getElementById('contenedor-divulgacion');
-            const contenedorModales = document.createElement('div');
-            contenedorModales.id = "modales-dinamicos";
-            document.body.appendChild(contenedorModales);
-
-            data.sort((a, b) => b.id - a.id); 
-
-            data.forEach(item => {
-                // Portfolio cards
-                const card = `
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#divulgacionModalDiv${item.id}">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="${item.imagen_card}" alt="${item.titulo}" />
-                        </div>
-                    </div>
-                `;
-                contenedorCards.innerHTML += card;
-
-                // --- LÓGICA CONDICIONAL PARA EL CONTENIDO MULTIMEDIA ---
-                let multimediaHTML = '';
-                if (item.youtube_id && item.youtube_id !== "") {
-                    // Si hay YouTube, creamos el embed responsivo
-                    multimediaHTML = `
-                        <div class="ratio ratio-16x9 mb-5">
-                            <iframe src="https://www.youtube.com/embed/${item.youtube_id}" title="YouTube video" allowfullscreen></iframe>
-                        </div>`;
-                } else if (item.imagen_modal && item.imagen_modal !== "") {
-                    // Si no hay YouTube pero hay imagen de detalle
-                    multimediaHTML = `<img class="img-fluid rounded mb-5" src="${item.imagen_modal}" alt="..." />`;
-                }
-
-                // Portfolio modal
-                const modal = `
-                    <div class="portfolio-modal modal fade" id="divulgacionModalDiv${item.id}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                                <div class="modal-body text-center pb-5">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <div class="col-lg-8">
-                                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">${item.titulo}</h2>
-                                                <div class="divider-custom">
-                                                </div>
-                                                
-                                                ${multimediaHTML} <p class="mb-4 text-start">${item.descripcion}</p>
-                                                <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                                    <i class="fas fa-external-link-alt fa-fw"></i> Más información
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                contenedorModales.innerHTML += modal;
-            });
-
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.body.classList.add('loaded'); // Mostrar aunque falle
+    // 1. Nueva función auxiliar para iluminar el botón correcto
+    function actualizarBotonesIdioma(lang) {
+        document.querySelectorAll('.lang-switch').forEach(btn => {
+            // Compara el atributo data-lang del span con el idioma activo
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
         });
+    }
 
+    // 2. Inicio de la aplicación (Sustituye todo lo anterior por esto)
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const langUrl = urlParams.get('lang');
+        const langStorage = localStorage.getItem('idiomaPreferido');
+        
+        // Prioridad: URL > Storage > Español por defecto
+        const idiomaFinal = langUrl || langStorage || 'es';
 
-
-        // Mostramos la página una vez inyectado el contenido
-        document.body.classList.add('loaded');
+        // Forzamos la carga inicial vaciando la variable de control
+        idiomaActual = ''; 
+        cambiarIdioma(idiomaFinal);
+    });
 </script>
-
-    </body>
+</body>
 </html>

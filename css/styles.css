@@ -11120,3 +11120,12 @@ html {
     text-transform: uppercase;
     letter-spacing: 0.05rem;
 }
+.lang-switch {
+    cursor: pointer;
+    font-weight: bold;
+    color: rgba(255,255,255,0.6); /* Color apagado para el no seleccionado */
+}
+.lang-switch.active {
+    color: #fff !important; /* Color brillante para el activo */
+    border-bottom: 2px solid #1abc9c;
+}
