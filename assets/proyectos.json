@@ -5,8 +5,7 @@
     "descripcion": "",
     "imagen_card": "assets/img/proyectos/digivolcan.png",
     "imagen_modal": "assets/img/proyectos/digivolcan.png",
-    "link": "https://www.aei.gob.es/",
-    "video": ""
+    "link": "https://www.aei.gob.es/"
   },
 
   {
@@ -16,8 +15,7 @@
     "imagen_card": "assets/img/proyectos/mu.png",
     "imagen_modal": "assets/img/proyectos/mustard.png",
 
-    "link": "https://codas.ugr.es/mustard/en/",
-    "video": ""
+    "link": "https://codas.ugr.es/mustard/en/"
   }
 
 ]

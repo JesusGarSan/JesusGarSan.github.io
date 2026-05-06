@@ -28,6 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#publicaciones" data-key="nav.publicaciones"></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#premios" data-key="nav.premios"></a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#proyectos" data-key="nav.proyectos"></a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divulgacion" data-key="nav.divulgacion"></a></li>
                     </ul>
@@ -79,6 +80,14 @@
                         <div id="contenedor-congresos" class="scroll-container shadow-sm"></div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="page-section portfolio" id="premios">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" data-key="sections.premios"></h2>
+                <div class="divider-custom"></div>
+                <div class="row justify-content-center" id="contenedor-premios"></div>
             </div>
         </section>
 
@@ -215,6 +224,7 @@
             });
 
         // Cargar Proyectos y Divulgación
+        cargarSeccionInfinita('assets/premios.json', 'contenedor-premios', 'proyectoModalDiv');
         cargarSeccionInfinita('assets/proyectos.json', 'contenedor-proyectos', 'proyectoModalDiv');
         cargarSeccionInfinita('assets/divulgacion.json', 'contenedor-divulgacion', 'divulgacionModalDiv');
     }

@@ -3,8 +3,9 @@
     "nav": {
       "brand": "Jesús García Sánchez",
       "publicaciones": "Publicaciones",
-      "proyectos": "Proyectos de investigación",
-      "divulgacion": "Divulgación Científica"
+      "premios": "Premios",
+      "proyectos": "Proyectos",
+      "divulgacion": "Divulgación científica"
     },
     "hero": {
       "cv_button": "Descarga mi CV",
@@ -15,6 +16,7 @@
       "publicaciones": "Publicaciones",
       "articulos": "Artículos",
       "congresos": "Congresos y Conferencias",
+      "premios": "Premios",
       "proyectos": "Proyectos de investigación",
       "divulgacion": "Divulgación científica"
     },
@@ -30,6 +32,7 @@
     "nav": {
       "brand": "Jesús García Sánchez",
       "publicaciones": "Publications",
+      "premios": "Awards",
       "proyectos": "Resarch projects",
       "divulgacion": "Science Communication"
     },
@@ -42,6 +45,7 @@
       "publicaciones": "Publications",
       "articulos": "Articles",
       "congresos": "Conferences",
+      "premios": "Awards",
       "proyectos": "Resarch projects",
       "divulgacion": "Science Communication"
     },
