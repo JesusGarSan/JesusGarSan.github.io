@@ -187,27 +187,47 @@
     function parseBibtexByTag(text, tagToFilter) {
         const entries = [];
         const blocks = text.split(/@/i).slice(1);
+        
         blocks.forEach(block => {
             if (block.toLowerCase().startsWith(tagToFilter.toLowerCase())) {
                 const entry = {};
+                
+                // Title
                 const titleMatch = block.match(/title\s*=\s*\{(.+?)\}/is);
                 if (titleMatch) entry.title = titleMatch[1].replace(/\s+/g, ' ').replace(/[\{\}]/g, '');
+                
+                // Author
                 const authorMatch = block.match(/author\s*=\s*\{(.+?)\}/is);
                 if (authorMatch) entry.author = authorMatch[1].replace(/\s+/g, ' ');
+                
+                // Source
                 const sourceMatch = block.match(/(journal|booktitle)\s*=\s*\{(.+?)\}/is);
                 if (sourceMatch) entry.source = sourceMatch[2];
+                
+                // Year
                 const yearMatch = block.match(/year\s*=\s*\{?(\d{4})\}?/i);
                 if (yearMatch) entry.year = parseInt(yearMatch[1]);
+                
+                // Month
                 const monthMatch = block.match(/month\s*=\s*\{?(\w+)\}?/i);
                 if (monthMatch) {
                     const mesKey = monthMatch[1].toLowerCase().substring(0, 3);
-                    if (mesesMap[mesKey]) {
+                    if (typeof mesesMap !== 'undefined' && mesesMap[mesKey]) {
                         entry.monthVal = mesesMap[mesKey].val;
                         entry.monthName = mesesMap[mesKey].nombre;
                     }
                 }
+                
+                // URL
                 const urlMatch = block.match(/url\s*=\s*\{(.+?)\}/i);
                 if (urlMatch) entry.url = urlMatch[1];
+
+                // --- THE FIX FOR THE NOTE FIELD ---
+                // Grabs the content inside note={...}
+                const noteMatch = block.match(/note\s*=\s*\{(.+?)\}/i);
+                // If it exists, use it; otherwise, use an empty string (prevents "undefined")
+                entry.note = noteMatch ? noteMatch[1] : ""; 
+                
                 if (entry.title) entries.push(entry);
             }
         });
@@ -229,25 +249,46 @@
         cargarSeccionInfinita('assets/divulgacion.json', 'contenedor-divulgacion', 'divulgacionModalDiv');
     }
 
-    function renderizarLista(pubs, contenedorId, noRecordsText) {
-        const contenedor = document.getElementById(contenedorId);
-        pubs.sort((a, b) => (b.year !== a.year) ? b.year - a.year : (b.monthVal || 0) - (a.monthVal || 0));
-        contenedor.innerHTML = pubs.length > 0 ? '' : `<p class="text-muted p-3">${noRecordsText}</p>`;
+function renderizarLista(pubs, contenedorId, noRecordsText) {
+    const contenedor = document.getElementById(contenedorId);
+    pubs.sort((a, b) => (b.year !== a.year) ? b.year - a.year : (b.monthVal || 0) - (a.monthVal || 0));
+    contenedor.innerHTML = pubs.length > 0 ? '' : `<p class="text-muted p-3">${noRecordsText}</p>`;
+    
+    pubs.forEach(pub => {
+        let authors = pub.author ? pub.author.replace(/ and /g, ', ') : "";
+        const fecha = pub.monthName ? `${pub.monthName} ${pub.year}` : pub.year;
         
-        pubs.forEach(pub => {
-            let authors = pub.author ? pub.author.replace(/ and /g, ', ') : "";
-            const fecha = pub.monthName ? `${pub.monthName} ${pub.year}` : pub.year;
-            contenedor.innerHTML += `
-                <div class="pub-item">
-                    <a href="${pub.url || '#'}" target="_blank" class="pub-title d-block mb-1">${pub.title}</a>
-                    <div class="pub-authors" style="font-size: 0.85rem;">${authors}</div>
-                    <div class="pub-meta">
-                        <i class="fas fa-bookmark me-1"></i> ${pub.source || 'Publicación'} | 
-                        <i class="fas fa-calendar-alt me-1"></i> ${fecha}
-                    </div>
-                </div>`;
-        });
-    }
+        let noteDisplay = "";
+        let iconClass = "fas fa-info-circle"; 
+
+        if (pub.note) {
+            // Capitalize only first letter (e.g., "Chair", "Poster")
+            noteDisplay = pub.note.charAt(0).toUpperCase() + pub.note.slice(1).toLowerCase();
+            
+            const lowNote = pub.note.toLowerCase();
+            if (lowNote.includes('poster')) {
+                iconClass = "fas fa-chalkboard";
+            } else if (lowNote.includes('chair')) {
+                iconClass = "fas fa-chair"; // Proper favicon for Session Chair
+            } else if (lowNote.includes('oral') || lowNote.includes('presentation')) {
+                iconClass = "fas fa-microphone-alt";
+            } else if (lowNote.includes('invited')) {
+                iconClass = "fas fa-star";
+            }
+        }
+
+        contenedor.innerHTML += `
+            <div class="pub-item mb-3">
+                <a href="${pub.url || '#'}" target="_blank" class="pub-title d-block mb-1">${pub.title}</a>
+                <div class="pub-authors" style="font-size: 0.85rem;">${authors}</div>
+                <div class="pub-meta" style="font-size: 0.85rem;">
+                    <i class="fas fa-bookmark me-1"></i> ${pub.source || 'Publicación'} | 
+                    <i class="fas fa-calendar-alt me-1"></i> ${fecha}
+                    ${pub.note ? ` | <span class="pub-note"><i class="${iconClass} me-1"></i> ${noteDisplay}</span>` : ''}
+                </div>
+            </div>`;
+    });
+}
 
 function cargarSeccionInfinita(url, contenedorId, modalPrefix) {
     fetch(url)

@@ -11129,3 +11129,20 @@ html {
     color: #fff !important; /* Color brillante para el activo */
     border-bottom: 2px solid #1abc9c;
 }
+
+/* 1. Prevent the forced capitalization in metadata */
+.pub-meta {
+    text-transform: none !important;
+}
+
+/* 2. Style the note specifically */
+.pub-note {
+    color: #6c757d; /* A neutral gray instead of turquoise */
+    text-transform: none !important; /* Double-check to disable caps */
+    font-weight: 500;
+}
+
+/* 3. Style the icon inside the note if you want it a specific color */
+.pub-note i {
+    color: #2c3e50; /* Dark blue/gray for the icon */
+}
