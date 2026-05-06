@@ -226,7 +226,6 @@
         
         pubs.forEach(pub => {
             let authors = pub.author ? pub.author.replace(/ and /g, ', ') : "";
-            authors = authors.replace(/(García, J\.|Fernández‐Carabantes, J\.)/g, '<strong>$1</strong>');
             const fecha = pub.monthName ? `${pub.monthName} ${pub.year}` : pub.year;
             contenedor.innerHTML += `
                 <div class="pub-item">

@@ -54,6 +54,15 @@
         "descripcion_es": "La Noche Europea de l@s Investigador@s es un evento divulgativo que se repite anualmente en muchas ciudades europeas. En 2019 y 2021 participé como voluntario. En 2025 participé como investigador con los talleres \"Decisiones espacio-temporales\" y \"¿Cuándo falla la ciencia?\".", 
         "descripcion_en": "La Noche Europea de l@s Investigador@s is an outreach event held annually in many European cities. In 2019 and 2021, I participated as a volunteer. In 2025, I participated as a researcher with the workshops \"Decisiones espacio-temporales\" and \"¿Cuándo falla la ciencia?\".",
         "link": "https://lanochedelosinvestigadores.fundaciondescubre.es/investigador/jesus-garcia-sanchez/"
+    },
+    {
+        "id": 7,
+        "titulo": "CITIC-Coffee",
+        "imagen_card": "assets/img/divulgacion/citic_coffee.png",
+        "imagen_modal": "assets/img/divulgacion/citic_coffee_apaisado.png",
+        "descripcion_es": "CITIC-Coffee es un evento organizado por y para la comunidad investigadora del CITIC-UGR, en el que los diferentes investigadores del centro ponen en común sus temas de investigación, a menudo sirviendo como preparativo para otros eventos de divulgación o conferencias internacionales", 
+        "descripcion_en": "CITIC-Coffee is an event organized by and for the CITIC-UGR research community, where the center's various researchers share their research topics, often serving as preparation for other outreach events or international conferences",
+        "link": "https://citic.ugr.es/informacion/noticias/citic-coffee-2026"
     }
 
 ]
